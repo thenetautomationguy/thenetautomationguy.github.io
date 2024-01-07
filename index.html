@@ -1,67 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-image: url('https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-            background-size: cover;
-            color: white; /* Text color for better visibility */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Center vertically within viewport */
-        }
-        
-        .container {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the container */
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .form-group label {
-            color: white; /* Text color for form labels */
-        }
-
-        .form-control {
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background for form inputs */
-            color: white; /* Text color for form inputs */
-        }
-
-        .btn-primary {
-            background-color: #007bff; /* Blue button color */
-            border-color: #007bff;
-            color: white; /* Text color for the button */
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>thenetautomationquy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <div class="container">
-        <h1 class="mt-5">Contact Me</h1>
-        <form action="https://formspree.io/f/xyyryvzv" method="POST" class="mt-4">
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <h1>thenetautomationquy.</h1>
+        <h2>Guardian of the Digital Frontier</h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">work</a>
+            <a onclick="showcontact()">contact</a>
+        </div>
+        <table>
+            <tr>
+                <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"
+                        href="https://github.com/thenetautomationquy"><i class="fab fa-github"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>work.</h1>
+        <p>
+            Take a look at some of the projects I've been involved with lately. I welcome you to check them out
+        </p>
+        <div class="project_card">
+            <div class="project_info">
+                <h3>dns-nat-proxy</h3>
+                <p>Smart DNS-NAT-Proxy for Optimized Request Routing and Response.</p>
+                <button class="btn_one"><a href="https://github.com/thenetautomationquy/dns-nat-proxy"
+                        style="color: inherit; text-decoration: none"> View Project </a></button>
+            </div>
+        </div>
+    </div>
+    <div id="about_container" class="container">
+        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+        <h1>about.</h1>
+        <section>
+            <h2>about me</h2>
+            <p>
+                As a Guardian of the Digital Frontier (Senior Network Security Engineer), I bring a wealth of expertise
+                and a passion for protecting and optimizing network infrastructures. With a focus on robust security
+                measures, I have honed my skills in a variety of technical areas to ensure the integrity and efficiency
+                of network systems.
+            </p>
+            <p>
+                In my role, I am committed to ensuring the highest levels of network security and performance. My
+                approach combines technical proficiency with a strategic mindset, allowing me to adapt to the evolving
+                landscape of network security and contribute to the resilience and success of the organizations I work
+                with.
+            </p>
+
+        </section>
+        <section>
+            <h2>professional skills</h2>
+            <ul>
+                <li>
+                    <p>Cisco Systems: Proficient in configuring and managing Cisco network devices, ensuring secure and
+                        efficient network operations.</p>
+                </li>
+                <li>
+                    <p>Fortinet: Experienced in implementing Fortinet's security solutions, providing comprehensive
+                        protection against a wide range of network threats.</p>
+                </li>
+                <li>
+                    <p>Private & Public Cloud: Skilled in deploying and securing network services in cloud environments,
+                        including AWS, Azure and on-prem VMware infrastructure.</p>
+                </li>
+                <li>
+                    <p>Rest API: Adept at integrating network systems with RESTful APIs, facilitating automation and
+                        efficient data exchange.</p>
+                </li>
+                <li>
+                    <p>Ansible & Terraform: Proficient in using these tools for automating network deployments and
+                        managing infrastructure as code, ensuring consistency and reliability in network configurations.
+                    </p>
+                </li>
+                <li>
+                    <p>Programming Languages: Proficient in Python and Go, leveraging these languages for network
+                        automation, scripting, and tool development, enhancing network functionality and operational
+                        efficiency.</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div id="contact_container" class="container">
+        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+        <h1>contact.</h1>
+        <section>
+            <p>
+            <form action="https://formspree.io/f/xyyryvzv" method="POST">
+                <input type="name" id="name" name="name" placeholder="name" class="form-control" required>
+                <input type="email" id="email" name="email" placeholder="email" class="form-control" required>
+                <textarea id="message" name="message" placeholder="meesage" class="form-control" rows="4"
+                    required></textarea>
+                <button type="submit" class="btn_one">Send</button>
+            </form>
+            </p>
+        </section>
+    </div>
+    <div id="footer">
+        made on earth by a human <br> <a href="https://thenetautomationquy.github.io">thenetautomationquy</a>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
